@@ -3,58 +3,57 @@ package cowin.slot.model;
 import java.util.List;
 
 public class CalenderByCenter {
-    public int center_id;
+    public int centerId;
     public String name;
-    public String name_l;
+    public String nameL;
     public String address;
-    public String address_l;
-    public String state_name;
-    public String state_name_l;
-    public String district_name;
-    public String district_name_l;
-    public String block_name;
-    public String block_name_l;
+    public String addressL;
+    public String stateName;
+    public String stateNameL;
+    public String districtName;
+    public String districtNameL;
+    public String blockName;
+    public String blockNameL;
     public String pincode;
     public double lat;
     public double lng;
     public String from;
     public String to;
-    public String fee_type;
-    public List<CalenderVaccineFee> vaccine_fees;
+    public String feeType;
+    public List<CalenderVaccineFee> vaccineFees;
     public List<CalenderSession> sessions;
 
-    public CalenderByCenter(int center_id, String name, String name_l, String address, String address_l,
-                            String state_name, String state_name_l, String district_name,
-                            String district_name_l, String block_name, String block_name_l,
-                            String pincode, double lat, double lng, String from, String to,
-                            String fee_type, List<CalenderVaccineFee> vaccine_fees, List<CalenderSession> sessions) {
-        this.center_id = center_id;
+    public CalenderByCenter(int centerId, String name, String nameL, String address, String addressL, String stateName,
+                            String stateNameL, String districtName, String districtNameL,
+                            String blockName, String blockNameL, String pincode, double lat, double lng, String from,
+                            String to, String feeType, List<CalenderVaccineFee> vaccineFees, List<CalenderSession> sessions) {
+        this.centerId = centerId;
         this.name = name;
-        this.name_l = name_l;
+        this.nameL = nameL;
         this.address = address;
-        this.address_l = address_l;
-        this.state_name = state_name;
-        this.state_name_l = state_name_l;
-        this.district_name = district_name;
-        this.district_name_l = district_name_l;
-        this.block_name = block_name;
-        this.block_name_l = block_name_l;
+        this.addressL = addressL;
+        this.stateName = stateName;
+        this.stateNameL = stateNameL;
+        this.districtName = districtName;
+        this.districtNameL = districtNameL;
+        this.blockName = blockName;
+        this.blockNameL = blockNameL;
         this.pincode = pincode;
         this.lat = lat;
         this.lng = lng;
         this.from = from;
         this.to = to;
-        this.fee_type = fee_type;
-        this.vaccine_fees = vaccine_fees;
+        this.feeType = feeType;
+        this.vaccineFees = vaccineFees;
         this.sessions = sessions;
     }
 
-    public int getCenter_id() {
-        return center_id;
+    public int getCenterId() {
+        return centerId;
     }
 
-    public void setCenter_id(int center_id) {
-        this.center_id = center_id;
+    public void setCenterId(int centerId) {
+        this.centerId = centerId;
     }
 
     public String getName() {
@@ -65,12 +64,12 @@ public class CalenderByCenter {
         this.name = name;
     }
 
-    public String getName_l() {
-        return name_l;
+    public String getNameL() {
+        return nameL;
     }
 
-    public void setName_l(String name_l) {
-        this.name_l = name_l;
+    public void setNameL(String nameL) {
+        this.nameL = nameL;
     }
 
     public String getAddress() {
@@ -81,60 +80,60 @@ public class CalenderByCenter {
         this.address = address;
     }
 
-    public String getAddress_l() {
-        return address_l;
+    public String getAddressL() {
+        return addressL;
     }
 
-    public void setAddress_l(String address_l) {
-        this.address_l = address_l;
+    public void setAddressL(String addressL) {
+        this.addressL = addressL;
     }
 
-    public String getState_name() {
-        return state_name;
+    public String getStateName() {
+        return stateName;
     }
 
-    public void setState_name(String state_name) {
-        this.state_name = state_name;
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
     }
 
-    public String getState_name_l() {
-        return state_name_l;
+    public String getStateNameL() {
+        return stateNameL;
     }
 
-    public void setState_name_l(String state_name_l) {
-        this.state_name_l = state_name_l;
+    public void setStateNameL(String stateNameL) {
+        this.stateNameL = stateNameL;
     }
 
-    public String getDistrict_name() {
-        return district_name;
+    public String getDistrictName() {
+        return districtName;
     }
 
-    public void setDistrict_name(String district_name) {
-        this.district_name = district_name;
+    public void setDistrictName(String districtName) {
+        this.districtName = districtName;
     }
 
-    public String getDistrict_name_l() {
-        return district_name_l;
+    public String getDistrictNameL() {
+        return districtNameL;
     }
 
-    public void setDistrict_name_l(String district_name_l) {
-        this.district_name_l = district_name_l;
+    public void setDistrictNameL(String districtNameL) {
+        this.districtNameL = districtNameL;
     }
 
-    public String getBlock_name() {
-        return block_name;
+    public String getBlockName() {
+        return blockName;
     }
 
-    public void setBlock_name(String block_name) {
-        this.block_name = block_name;
+    public void setBlockName(String blockName) {
+        this.blockName = blockName;
     }
 
-    public String getBlock_name_l() {
-        return block_name_l;
+    public String getBlockNameL() {
+        return blockNameL;
     }
 
-    public void setBlock_name_l(String block_name_l) {
-        this.block_name_l = block_name_l;
+    public void setBlockNameL(String blockNameL) {
+        this.blockNameL = blockNameL;
     }
 
     public String getPincode() {
@@ -177,20 +176,20 @@ public class CalenderByCenter {
         this.to = to;
     }
 
-    public String getFee_type() {
-        return fee_type;
+    public String getFeeType() {
+        return feeType;
     }
 
-    public void setFee_type(String fee_type) {
-        this.fee_type = fee_type;
+    public void setFeeType(String feeType) {
+        this.feeType = feeType;
     }
 
-    public List<CalenderVaccineFee> getVaccine_fees() {
-        return vaccine_fees;
+    public List<CalenderVaccineFee> getVaccineFees() {
+        return vaccineFees;
     }
 
-    public void setVaccine_fees(List<CalenderVaccineFee> vaccine_fees) {
-        this.vaccine_fees = vaccine_fees;
+    public void setVaccineFees(List<CalenderVaccineFee> vaccineFees) {
+        this.vaccineFees = vaccineFees;
     }
 
     public List<CalenderSession> getSessions() {

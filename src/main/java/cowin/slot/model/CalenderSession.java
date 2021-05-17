@@ -3,33 +3,33 @@ package cowin.slot.model;
 import java.util.List;
 
 public class CalenderSession {
-    public String session_id;
+    public String sessionId;
     public String date;
-    public int available_capacity;
-    public int available_capacity_dose1;
-    public int available_capacity_dose2;
-    public int min_age_limit;
+    public int availableCapacity;
+    public int availableCapacityDose1;
+    public int availableCapacityDose2;
+    public int minAgeLimit;
     public String vaccine;
     public List<String> slots;
 
-    public CalenderSession(String session_id, String date, int available_capacity, int available_capacity_dose1,
-                           int available_capacity_dose2, int min_age_limit, String vaccine, List<String> slots) {
-        this.session_id = session_id;
+    public CalenderSession(String sessionId, String date, int availableCapacity, int availableCapacityDose1,
+                           int availableCapacityDose2, int minAgeLimit, String vaccine, List<String> slots) {
+        this.sessionId = sessionId;
         this.date = date;
-        this.available_capacity = available_capacity;
-        this.available_capacity_dose1 = available_capacity_dose1;
-        this.available_capacity_dose2 = available_capacity_dose2;
-        this.min_age_limit = min_age_limit;
+        this.availableCapacity = availableCapacity;
+        this.availableCapacityDose1 = availableCapacityDose1;
+        this.availableCapacityDose2 = availableCapacityDose2;
+        this.minAgeLimit = minAgeLimit;
         this.vaccine = vaccine;
         this.slots = slots;
     }
 
-    public String getSession_id() {
-        return session_id;
+    public String getSessionId() {
+        return sessionId;
     }
 
-    public void setSession_id(String session_id) {
-        this.session_id = session_id;
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
     }
 
     public String getDate() {
@@ -40,36 +40,36 @@ public class CalenderSession {
         this.date = date;
     }
 
-    public int getAvailable_capacity() {
-        return available_capacity;
+    public int getAvailableCapacity() {
+        return availableCapacity;
     }
 
-    public void setAvailable_capacity(int available_capacity) {
-        this.available_capacity = available_capacity;
+    public void setAvailableCapacity(int availableCapacity) {
+        this.availableCapacity = availableCapacity;
     }
 
-    public int getAvailable_capacity_dose1() {
-        return available_capacity_dose1;
+    public int getAvailableCapacityDose1() {
+        return availableCapacityDose1;
     }
 
-    public void setAvailable_capacity_dose1(int available_capacity_dose1) {
-        this.available_capacity_dose1 = available_capacity_dose1;
+    public void setAvailableCapacityDose1(int availableCapacityDose1) {
+        this.availableCapacityDose1 = availableCapacityDose1;
     }
 
-    public int getAvailable_capacity_dose2() {
-        return available_capacity_dose2;
+    public int getAvailableCapacityDose2() {
+        return availableCapacityDose2;
     }
 
-    public void setAvailable_capacity_dose2(int available_capacity_dose2) {
-        this.available_capacity_dose2 = available_capacity_dose2;
+    public void setAvailableCapacityDose2(int availableCapacityDose2) {
+        this.availableCapacityDose2 = availableCapacityDose2;
     }
 
-    public int getMin_age_limit() {
-        return min_age_limit;
+    public int getMinAgeLimit() {
+        return minAgeLimit;
     }
 
-    public void setMin_age_limit(int min_age_limit) {
-        this.min_age_limit = min_age_limit;
+    public void setMinAgeLimit(int minAgeLimit) {
+        this.minAgeLimit = minAgeLimit;
     }
 
     public String getVaccine() {
