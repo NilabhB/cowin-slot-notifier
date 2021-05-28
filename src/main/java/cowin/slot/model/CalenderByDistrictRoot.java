@@ -1,19 +1,10 @@
 package cowin.slot.model;
 
+import org.immutables.value.Value;
+
 import java.util.List;
 
-public class CalenderByDistrictRoot {
-    public List<CalenderByDistrictCenter> centers;
-
-    public CalenderByDistrictRoot(List<CalenderByDistrictCenter> centers) {
-        this.centers = centers;
-    }
-
-    public List<CalenderByDistrictCenter> getCenters() {
-        return centers;
-    }
-
-    public void setCenters(List<CalenderByDistrictCenter> centers) {
-        this.centers = centers;
-    }
+@Value.Immutable
+public interface CalenderByDistrictRoot {
+    List<CalenderByDistrictCenter> centers();
 }

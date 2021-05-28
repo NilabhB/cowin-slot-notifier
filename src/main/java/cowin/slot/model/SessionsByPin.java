@@ -1,15 +1,10 @@
 package cowin.slot.model;
 
+import org.immutables.value.Value;
+
 import java.util.List;
 
-public class SessionsByPin {
-   private final List<Sessions> sessions;
-
-   public SessionsByPin(List<Sessions> sessions) {
-      this.sessions = sessions;
-   }
-
-   public List<Sessions> getSessions() {
-      return sessions;
-   }
+@Value.Immutable
+public interface SessionsByPin {
+    List<Sessions> sessions();
 }

@@ -1,27 +1,10 @@
 package cowin.slot.model;
 
-public class CalenderVaccineFee {
-    public String vaccine;
-    public String fee;
+import org.immutables.value.Value;
 
-    public CalenderVaccineFee(String vaccine, String fee) {
-        this.vaccine = vaccine;
-        this.fee = fee;
-    }
+@Value.Immutable
+public interface CalenderVaccineFee {
+    String vaccine();
 
-    public String getVaccine() {
-        return vaccine;
-    }
-
-    public void setVaccine(String vaccine) {
-        this.vaccine = vaccine;
-    }
-
-    public String getFee() {
-        return fee;
-    }
-
-    public void setFee(String fee) {
-        this.fee = fee;
-    }
+    String fee();
 }
