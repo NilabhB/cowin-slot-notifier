@@ -1,15 +1,10 @@
 package cowin.slot.model;
 
+import org.immutables.value.Value;
+
 import java.util.List;
 
-public class Districts {
-    private final List<District> districts;
-
-    public Districts(List<District> districts) {
-        this.districts = districts;
-    }
-
-    public List<District> getDistricts() {
-        return districts;
-    }
+@Value.Immutable
+public interface Districts {
+    List<District> districts();
 }

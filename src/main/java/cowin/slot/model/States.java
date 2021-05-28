@@ -1,15 +1,10 @@
 package cowin.slot.model;
 
+import org.immutables.value.Value;
+
 import java.util.List;
 
-public class States {
-    private final List<State> states;
-
-    public States(List<State> states) {
-        this.states = states;
-    }
-
-    public List<State> getStates() {
-        return states;
-    }
+@Value.Immutable
+public interface States {
+    List<State> states();
 }
