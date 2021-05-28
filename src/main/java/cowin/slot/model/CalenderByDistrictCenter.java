@@ -1,204 +1,52 @@
 package cowin.slot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.immutables.value.Value;
+
 import java.util.List;
 
-public class CalenderByDistrictCenter {
+@Value.Immutable
+@JsonSerialize(as = ImmutableCalenderByDistrictCenter.class)
+@JsonDeserialize(builder = ImmutableCalenderByDistrictCenter.Builder.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public interface CalenderByDistrictCenter {
+    int centerId();
 
-    public int centerId;
-    public String name;
-    public String nameL;
-    public String address;
-    public String addressL;
-    public String stateName;
-    public String stateNameL;
-    public String districtName;
-    public String districtNameL;
-    public String blockName;
-    public String blockNameL;
-    public String pincode;
-    public double lat;
-    public double lng;
-    public String from;
-    public String to;
-    public String feeType;
-    public List<CalenderVaccineFee> vaccine_fees;
-    public List<CalenderSession> sessions;
+    String name();
 
-    public CalenderByDistrictCenter(int centerId, String name, String nameL, String address, String addressL,
-                                    String stateName, String stateNameL, String districtName, String districtNameL,
-                                    String blockName, String blockNameL, String pincode, double lat, double lng,
-                                    String from, String to, String feeType, List<CalenderVaccineFee> vaccine_fees,
-                                    List<CalenderSession> sessions) {
-        this.centerId = centerId;
-        this.name = name;
-        this.nameL = nameL;
-        this.address = address;
-        this.addressL = addressL;
-        this.stateName = stateName;
-        this.stateNameL = stateNameL;
-        this.districtName = districtName;
-        this.districtNameL = districtNameL;
-        this.blockName = blockName;
-        this.blockNameL = blockNameL;
-        this.pincode = pincode;
-        this.lat = lat;
-        this.lng = lng;
-        this.from = from;
-        this.to = to;
-        this.feeType = feeType;
-        this.vaccine_fees = vaccine_fees;
-        this.sessions = sessions;
-    }
+    String nameL();
 
-    public int getCenterId() {
-        return centerId;
-    }
+    String address();
 
-    public void setCenterId(int centerId) {
-        this.centerId = centerId;
-    }
+    String addressL();
 
-    public String getName() {
-        return name;
-    }
+    String stateName();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    String stateNameL();
 
-    public String getNameL() {
-        return nameL;
-    }
+    String districtName();
 
-    public void setNameL(String nameL) {
-        this.nameL = nameL;
-    }
+    String districtNameL();
 
-    public String getAddress() {
-        return address;
-    }
+    String blockName();
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+    String blockNameL();
 
-    public String getAddressL() {
-        return addressL;
-    }
+    String pincode();
 
-    public void setAddressL(String addressL) {
-        this.addressL = addressL;
-    }
+    double lat();
 
-    public String getStateName() {
-        return stateName;
-    }
+    double lng();
 
-    public void setStateName(String stateName) {
-        this.stateName = stateName;
-    }
+    String from();
 
-    public String getStateNameL() {
-        return stateNameL;
-    }
+    String to();
 
-    public void setStateNameL(String stateNameL) {
-        this.stateNameL = stateNameL;
-    }
+    String feeType();
 
-    public String getDistrictName() {
-        return districtName;
-    }
+    List<CalenderVaccineFee> vaccine_fees();
 
-    public void setDistrictName(String districtName) {
-        this.districtName = districtName;
-    }
-
-    public String getDistrictNameL() {
-        return districtNameL;
-    }
-
-    public void setDistrictNameL(String districtNameL) {
-        this.districtNameL = districtNameL;
-    }
-
-    public String getBlockName() {
-        return blockName;
-    }
-
-    public void setBlockName(String blockName) {
-        this.blockName = blockName;
-    }
-
-    public String getBlockNameL() {
-        return blockNameL;
-    }
-
-    public void setBlockNameL(String blockNameL) {
-        this.blockNameL = blockNameL;
-    }
-
-    public String getPincode() {
-        return pincode;
-    }
-
-    public void setPincode(String pincode) {
-        this.pincode = pincode;
-    }
-
-    public double getLat() {
-        return lat;
-    }
-
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
-    public double getLng() {
-        return lng;
-    }
-
-    public void setLng(double lng) {
-        this.lng = lng;
-    }
-
-    public String getFrom() {
-        return from;
-    }
-
-    public void setFrom(String from) {
-        this.from = from;
-    }
-
-    public String getTo() {
-        return to;
-    }
-
-    public void setTo(String to) {
-        this.to = to;
-    }
-
-    public String getFeeType() {
-        return feeType;
-    }
-
-    public void setFeeType(String feeType) {
-        this.feeType = feeType;
-    }
-
-    public List<CalenderVaccineFee> getVaccine_fees() {
-        return vaccine_fees;
-    }
-
-    public void setVaccine_fees(List<CalenderVaccineFee> vaccine_fees) {
-        this.vaccine_fees = vaccine_fees;
-    }
-
-    public List<CalenderSession> getSessions() {
-        return sessions;
-    }
-
-    public void setSessions(List<CalenderSession> sessions) {
-        this.sessions = sessions;
-    }
+    List<CalenderSession> sessions();
 }

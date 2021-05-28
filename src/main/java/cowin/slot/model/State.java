@@ -1,37 +1,18 @@
 package cowin.slot.model;
 
-public class State {
-    private int stateId;
-    private String stateName;
-    private String stateNameL;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.immutables.value.Value;
 
-    public State(int stateId, String stateName, String stateNameL) {
-        this.stateId = stateId;
-        this.stateName = stateName;
-        this.stateNameL = stateNameL;
-    }
+@Value.Immutable
+@JsonSerialize(as = ImmutableState.class)
+@JsonDeserialize(builder = ImmutableState.Builder.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public interface State {
+    int stateId();
 
-    public int getStateId() {
-        return stateId;
-    }
+    String stateName();
 
-    public void setStateId(int stateId) {
-        this.stateId = stateId;
-    }
-
-    public String getStateName() {
-        return stateName;
-    }
-
-    public void setStateName(String stateName) {
-        this.stateName = stateName;
-    }
-
-    public String getStateNameL() {
-        return stateNameL;
-    }
-
-    public void setStateNameL(String stateNameL) {
-        this.stateNameL = stateNameL;
-    }
+    String stateNameL();
 }

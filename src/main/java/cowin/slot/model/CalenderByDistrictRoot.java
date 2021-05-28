@@ -1,19 +1,16 @@
 package cowin.slot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.immutables.value.Value;
+
 import java.util.List;
 
-public class CalenderByDistrictRoot {
-    public List<CalenderByDistrictCenter> centers;
-
-    public CalenderByDistrictRoot(List<CalenderByDistrictCenter> centers) {
-        this.centers = centers;
-    }
-
-    public List<CalenderByDistrictCenter> getCenters() {
-        return centers;
-    }
-
-    public void setCenters(List<CalenderByDistrictCenter> centers) {
-        this.centers = centers;
-    }
+@Value.Immutable
+@JsonSerialize(as = ImmutableCalenderByDistrictRoot.class)
+@JsonDeserialize(builder = ImmutableCalenderByDistrictRoot.Builder.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public interface CalenderByDistrictRoot {
+    List<CalenderByDistrictCenter> centers();
 }

@@ -1,15 +1,16 @@
 package cowin.slot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.immutables.value.Value;
+
 import java.util.List;
 
-public class SessionsByPin {
-   private final List<Sessions> sessions;
-
-   public SessionsByPin(List<Sessions> sessions) {
-      this.sessions = sessions;
-   }
-
-   public List<Sessions> getSessions() {
-      return sessions;
-   }
+@Value.Immutable
+@JsonSerialize(as = ImmutableSessionsByPin.class)
+@JsonDeserialize(builder = ImmutableSessionsByPin.Builder.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public interface SessionsByPin {
+    List<Sessions> sessions();
 }

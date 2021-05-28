@@ -1,27 +1,16 @@
 package cowin.slot.model;
 
-public class CalenderVaccineFee {
-    public String vaccine;
-    public String fee;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.immutables.value.Value;
 
-    public CalenderVaccineFee(String vaccine, String fee) {
-        this.vaccine = vaccine;
-        this.fee = fee;
-    }
+@Value.Immutable
+@JsonSerialize(as = ImmutableCalenderVaccineFee.class)
+@JsonDeserialize(builder = ImmutableCalenderVaccineFee.Builder.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public interface CalenderVaccineFee {
+    String vaccine();
 
-    public String getVaccine() {
-        return vaccine;
-    }
-
-    public void setVaccine(String vaccine) {
-        this.vaccine = vaccine;
-    }
-
-    public String getFee() {
-        return fee;
-    }
-
-    public void setFee(String fee) {
-        this.fee = fee;
-    }
+    String fee();
 }

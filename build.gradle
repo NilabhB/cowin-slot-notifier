@@ -2,16 +2,25 @@ plugins {
     id 'java'
 }
 
+apply from: 'dependencies.version.gradle'
+
 group 'cowin.slot'
 version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation "org.immutables:value:${immutableVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    annotationProcessor "org.immutables:value:${immutableVersion}"
 }
 
 test {

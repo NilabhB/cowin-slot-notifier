@@ -1,47 +1,20 @@
 package cowin.slot.model;
 
-public class District {
-   private int stateId;
-   private int districtId;
-   private String districtName;
-   private String districtL;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.immutables.value.Value;
 
-    public District(int stateId, int districtId, String districtName, String districtL) {
-        this.stateId = stateId;
-        this.districtId = districtId;
-        this.districtName = districtName;
-        this.districtL = districtL;
-    }
+@Value.Immutable
+@JsonSerialize(as = ImmutableDistrict.class)
+@JsonDeserialize(builder = ImmutableDistrict.Builder.class)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public interface District {
+    int stateId();
 
-    public int getStateId() {
-        return stateId;
-    }
+    int districtId();
 
-    public void setStateId(int stateId) {
-        this.stateId = stateId;
-    }
+    String districtName();
 
-    public int getDistrictId() {
-        return districtId;
-    }
-
-    public void setDistrictId(int districtId) {
-        this.districtId = districtId;
-    }
-
-    public String getDistrictName() {
-        return districtName;
-    }
-
-    public void setDistrictName(String districtName) {
-        this.districtName = districtName;
-    }
-
-    public String getDistrictL() {
-        return districtL;
-    }
-
-    public void setDistrictL(String districtL) {
-        this.districtL = districtL;
-    }
+    String districtL();
 }
